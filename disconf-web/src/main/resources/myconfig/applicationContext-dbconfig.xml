@@ -10,39 +10,28 @@
     <description>database数据源配置</description>
 
     <!-- onedb configure start -->
-
-    <bean id="onedbDataSource" abstract="true"
-          class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
-        <property name="driverClass">
-            <value>${jdbc.driverClassName}</value>
-        </property>
-        <property name="initialPoolSize">
-            <value>${jdbc.initialPoolSize}</value>
-        </property>
-        <property name="maxPoolSize">
-            <value>${jdbc.maxPoolSize}</value>
-        </property>
-        <property name="minPoolSize">
-            <value>${jdbc.minPoolSize}</value>
-        </property>
-        <property name="idleConnectionTestPeriod">
-            <value>${jdbc.idleConnectionTestPeriod}</value>
-        </property>
-        <property name="maxIdleTime">
-            <value>${jdbc.maxIdleTime}</value>
-        </property>
-    </bean>
-
+	<bean id="onedbDataSource" abstract="true" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="initialSize" value="${dbcp.initialSize}" /><!--初始化连接 -->
+		<property name="maxActive" value="${dbcp.maxActive}" /><!--最大活动连接 -->
+		<property name="minIdle" value="${dbcp.minIdle}" /><!--最小空闲连接 -->
+		<property name="maxIdle" value="${dbcp.maxIdle}" /><!--最大空闲连接 -->
+		<property name="maxWait" value="${dbcp.maxWait}" /><!--最大等待时间(单位:毫秒) -->
+		<property name="removeAbandonedTimeout" value="${dbcp.removeAbandonedTimeout}" /> <!--活动连接的最大空闲时间（单位：秒） -->
+		<property name="removeAbandoned" value="${dbcp.removeAbandoned}" /> <!--是否自动清理没有使用的活动连接 -->
+		<property name="minEvictableIdleTimeMillis" value="${dbcp.minEvictableIdleTimeMillis}" /><!--连接最大空闲时间（单位：毫秒） -->
+		<property name="timeBetweenEvictionRunsMillis" value="${dbcp.timeBetweenEvictionRunsMillis}" /> <!--定时运行空闲连接回收器时间(单位：毫秒) -->
+		<property name="numTestsPerEvictionRun" value="${dbcp.numTestsPerEvictionRun}" /> <!--每次验证空闲连接的连接数目 -->
+		<property name="validationQuery" value="${dbcp.validationQuery}" /> <!--验证数据库连接SQL语句 -->
+		<property name="testOnBorrow" value="${dbcp.testOnBorrow}" /> <!--借出连接，验证是否有效 -->
+		<property name="testOnReturn" value="${dbcp.testOnReturn}" /> <!--返还连接，验证是否有效 -->
+		<property name="testWhileIdle" value="${dbcp.testWhileIdle}" /> <!--空闲连接回收器验证空闲连接是否有效-->
+		<property name="logAbandoned" value="${dbcp.logAbandoned}" /> <!--连接池收回空闲的活动连接时是否打印消息 -->
+	</bean>
     <bean id="onedb_0" parent="onedbDataSource">
-        <property name="jdbcUrl">
-            <value>${jdbc.db_0.url}</value>
-        </property>
-        <property name="user">
-            <value>${jdbc.db_0.username}</value>
-        </property>
-        <property name="password">
-            <value>${jdbc.db_0.password}</value>
-        </property>
+   		<property name="driverClassName" value="${jdbc.driverClassName}" /><!--数据库驱动 -->
+        <property name="url" value="${jdbc.db_0.url}" /><!--数据库连接URL -->
+		<property name="username" value="${jdbc.db_0.username}" /><!--用户 -->
+		<property name="password" value="${jdbc.db_0.password}" /><!--密码 -->
     </bean>
 
     <bean id="vdb_one"

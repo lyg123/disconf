@@ -6,7 +6,7 @@
 
     <property name="log.base" value="./log/disconf-web"/>
     <property name="log.monitor" value="./log/monitor"/>
-    <property resource="rabbit.properties"/>
+<!--     <property resource="rabbit.properties"/> -->
 
     <jmxConfigurator/>
 

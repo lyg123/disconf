@@ -25,37 +25,37 @@
 
         <!-- spring dependencies -->
 
-        <dependency>
-            <groupId>org.springframework.amqp</groupId>
-            <artifactId>spring-amqp</artifactId>
-            <version>${spring.amqp.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-core</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+<!--         <dependency> -->
+<!--             <groupId>org.springframework.amqp</groupId> -->
+<!--             <artifactId>spring-amqp</artifactId> -->
+<!--             <version>${spring.amqp.version}</version> -->
+<!--             <exclusions> -->
+<!--                 <exclusion> -->
+<!--                     <groupId>org.springframework</groupId> -->
+<!--                     <artifactId>spring-core</artifactId> -->
+<!--                 </exclusion> -->
+<!--             </exclusions> -->
+<!--         </dependency> -->
 
-        <dependency>
-            <groupId>org.springframework.amqp</groupId>
-            <artifactId>spring-rabbit</artifactId>
-            <version>${spring.amqp.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-core</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-messaging</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring-context</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+<!--         <dependency> -->
+<!--             <groupId>org.springframework.amqp</groupId> -->
+<!--             <artifactId>spring-rabbit</artifactId> -->
+<!--             <version>${spring.amqp.version}</version> -->
+<!--             <exclusions> -->
+<!--                 <exclusion> -->
+<!--                     <groupId>org.springframework</groupId> -->
+<!--                     <artifactId>spring-core</artifactId> -->
+<!--                 </exclusion> -->
+<!--                 <exclusion> -->
+<!--                     <groupId>org.springframework</groupId> -->
+<!--                     <artifactId>spring-messaging</artifactId> -->
+<!--                 </exclusion> -->
+<!--                 <exclusion> -->
+<!--                     <groupId>org.springframework</groupId> -->
+<!--                     <artifactId>spring-context</artifactId> -->
+<!--                 </exclusion> -->
+<!--             </exclusions> -->
+<!--         </dependency> -->
 
         <dependency>
             <groupId>org.springframework</groupId>
@@ -191,10 +191,10 @@
             <artifactId>javax.annotation-api</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>c3p0</groupId>
-            <artifactId>c3p0</artifactId>
-        </dependency>
+<!--         <dependency> -->
+<!--             <groupId>c3p0</groupId> -->
+<!--             <artifactId>c3p0</artifactId> -->
+<!--         </dependency> -->
 
         <dependency>
             <groupId>commons-beanutils</groupId>
