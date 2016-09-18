@@ -126,7 +126,7 @@
             <scope>test</scope>
             <!-- Include this if you have dependency conflicts for Guava, 
                 Jetty, Jackson or Apache HTTP Client -->
-            <classifier>standalone</classifier>
+<!--             <classifier>standalone</classifier> -->
         </dependency>
 
     </dependencies>
